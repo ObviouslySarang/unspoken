@@ -34,6 +34,13 @@ const CustomBuilder = ({ onCreateScenario }) => {
         <br />
         <button type="submit">Create Scenario</button>
       </form>
+      <section>
+        <h3>How to Use</h3>
+        <p>
+          Describe a situation you want to practice. Your custom scenario can be
+          sent to AI Feedback or used in a puzzle.
+        </p>
+      </section>
     </div>
   );
 };

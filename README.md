@@ -8,13 +8,19 @@ Unspoken is a cross-platform puzzle game app that helps users practice and expre
 - Custom scenario builder
 - Diverse puzzle types (emotions, word maze, role-play, etc.)
 - Real-time AI feedback
-- Community support and sharing
-- Robust privacy and accessibility
+- Community support and sharing (forum/chat stub)
+- Robust privacy and accessibility controls
 
 ## Getting Started
 
 1. Install dependencies: `npm install`
 2. Start development server: `npm run dev`
+
+## Usage
+
+- Use the navigation bar to switch between features.
+- Select or create a scenario, solve puzzles, and get AI feedback.
+- Adjust privacy settings and join the community for support.
 
 ## System Requirements
 

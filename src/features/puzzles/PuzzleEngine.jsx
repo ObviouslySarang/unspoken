@@ -196,6 +196,13 @@ const PuzzleEngine = ({ onPuzzleComplete }) => {
           <BarrierBreaker onComplete={handleComplete} />
         )}
       </div>
+      <section>
+        <h3>How to Use</h3>
+        <p>
+          Choose a puzzle type and interact with it to practice communication
+          skills. You can send your solution to AI Feedback for analysis.
+        </p>
+      </section>
     </div>
   );
 };

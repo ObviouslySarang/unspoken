@@ -4,20 +4,29 @@ const AIFeedback = ({ initialInput = "" }) => {
   const [feedback, setFeedback] = useState("");
   const [input, setInput] = useState(initialInput);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     setInput(initialInput);
   }, [initialInput]);
 
   const handleAI = async () => {
+    setError("");
+    if (!input.trim()) {
+      setError("Please enter a message to get feedback.");
+      setFeedback("");
+      return;
+    }
     setLoading(true);
-    // TODO: Replace with real AI integration (e.g., fetch to backend)
-    await new Promise((res) => setTimeout(res, 1200));
-    setFeedback(
-      input
-        ? `AI Feedback: Your message "${input}" is clear and empathetic. Try to be more specific about your feelings.`
-        : "Please enter a message to get feedback."
-    );
+    try {
+      // TODO: Replace with real AI integration (e.g., fetch to backend)
+      await new Promise((res) => setTimeout(res, 1200));
+      setFeedback(
+        `AI Feedback: Your message "${input}" is clear and empathetic. Try to be more specific about your feelings.`
+      );
+    } catch (e) {
+      setError("Failed to get feedback. Please try again.");
+    }
     setLoading(false);
   };
 
@@ -40,6 +49,11 @@ const AIFeedback = ({ initialInput = "" }) => {
       >
         {loading ? "Getting Feedback..." : "Get AI Feedback"}
       </button>
+      {error && (
+        <div style={{ color: "red", marginBottom: 8 }} role="alert">
+          {error}
+        </div>
+      )}
       <div role="status" aria-live="polite" style={{ minHeight: 24 }}>
         {feedback}
       </div>

@@ -18,6 +18,13 @@ const ScenarioLibrary = ({ onSelectScenario }) => (
         </li>
       ))}
     </ul>
+    <section>
+      <h3>How to Use</h3>
+      <p>
+        Select a scenario to practice communicating difficult topics. You can send
+        it to the AI Feedback or use it in a puzzle.
+      </p>
+    </section>
   </div>
 );
 

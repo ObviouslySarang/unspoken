@@ -28,6 +28,14 @@ const PrivacyCenter = () => (
         <li>Keyboard navigation</li>
       </ul>
     </section>
+    <section>
+      <h3>How to Use</h3>
+      <p>
+        Adjust your privacy settings to control what information is shared and how
+        feedback is processed. All data is handled securely and with respect for
+        your privacy.
+      </p>
+    </section>
   </div>
 );
 
