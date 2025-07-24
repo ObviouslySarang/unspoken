@@ -35,8 +35,7 @@ function JigsawOfEmotions({ onComplete }) {
         <button
           style={{ marginLeft: 8 }}
           onClick={() =>
-            onComplete &&
-            onComplete(`Jigsaw emotions: ${selected.join(", ")}`)
+            onComplete && onComplete(`Jigsaw emotions: ${selected.join(", ")}`)
           }
         >
           Send to AI Feedback
@@ -91,7 +90,7 @@ function RolePlayDialogues({ onComplete }) {
       <button
         style={{ margin: 4 }}
         onClick={() =>
-          onComplete && onComplete('Role-play: I understand your point.')
+          onComplete && onComplete("Role-play: I understand your point.")
         }
       >
         "I understand your point."
@@ -99,7 +98,7 @@ function RolePlayDialogues({ onComplete }) {
       <button
         style={{ margin: 4 }}
         onClick={() =>
-          onComplete && onComplete('Role-play: Can we talk about this later?')
+          onComplete && onComplete("Role-play: Can we talk about this later?")
         }
       >
         "Can we talk about this later?"
@@ -107,7 +106,7 @@ function RolePlayDialogues({ onComplete }) {
       <button
         style={{ margin: 4 }}
         onClick={() =>
-          onComplete && onComplete('Role-play: I feel hurt by what happened.')
+          onComplete && onComplete("Role-play: I feel hurt by what happened.")
         }
       >
         "I feel hurt by what happened."
@@ -191,7 +190,9 @@ const PuzzleEngine = ({ onPuzzleComplete }) => {
         {selected === "Role-Play Dialogues" && (
           <RolePlayDialogues onComplete={handleComplete} />
         )}
-        {selected === "Letter Builder" && <LetterBuilder onComplete={handleComplete} />}
+        {selected === "Letter Builder" && (
+          <LetterBuilder onComplete={handleComplete} />
+        )}
         {selected === "Barrier Breaker" && (
           <BarrierBreaker onComplete={handleComplete} />
         )}

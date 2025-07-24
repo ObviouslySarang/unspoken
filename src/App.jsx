@@ -53,9 +53,15 @@ function App() {
         >
           Unspoken Puzzle Game App
         </h1>
-        {section === "scenarios" && <ScenarioLibrary onSelectScenario={setAIInput} />}
-        {section === "custom" && <CustomBuilder onCreateScenario={setAIInput} />}
-        {section === "puzzles" && <PuzzleEngine onPuzzleComplete={setAIInput} />}
+        {section === "scenarios" && (
+          <ScenarioLibrary onSelectScenario={setAIInput} />
+        )}
+        {section === "custom" && (
+          <CustomBuilder onCreateScenario={setAIInput} />
+        )}
+        {section === "puzzles" && (
+          <PuzzleEngine onPuzzleComplete={setAIInput} />
+        )}
         {section === "ai" && <AIFeedback initialInput={aiInput} />}
         {section === "community" && <Community />}
         {section === "privacy" && <PrivacyCenter />}

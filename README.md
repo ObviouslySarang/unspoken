@@ -6,10 +6,11 @@ Unspoken is a cross-platform puzzle game app that helps users practice and expre
 
 - Scenario library for common difficult conversations
 - Custom scenario builder
-- Diverse puzzle types (emotions, word maze, role-play, etc.)
-- Real-time AI feedback
+- Diverse puzzle types (Jigsaw of Emotions, Word Maze, Role-Play Dialogues, Letter Builder, Barrier Breaker)
+- Real-time AI feedback (with privacy and accessibility)
 - Community support and sharing (forum/chat stub)
-- Robust privacy and accessibility controls
+- Robust privacy controls and accessibility features
+- Modern, responsive UI with nude pink theme
 
 ## Getting Started
 
@@ -21,6 +22,7 @@ Unspoken is a cross-platform puzzle game app that helps users practice and expre
 - Use the navigation bar to switch between features.
 - Select or create a scenario, solve puzzles, and get AI feedback.
 - Adjust privacy settings and join the community for support.
+- All feedback is private and processed securely. No personal data is stored without consent.
 
 ## System Requirements
 
@@ -34,3 +36,11 @@ Unspoken is a cross-platform puzzle game app that helps users practice and expre
 3. Integrate AI for scenario generation and feedback
 4. Add accessibility, security, and cultural sensitivity features
 5. Test and deploy
+
+## Contributing
+
+Pull requests and feedback are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+MIT
