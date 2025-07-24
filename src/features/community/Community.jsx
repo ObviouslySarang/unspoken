@@ -3,8 +3,8 @@ import React from "react";
 const Community = () => (
   <div>
     <h2>Community</h2>
-    <p>Connect and share with others practicing difficult conversations.</p>
-    {/* TODO: Community features */}
+    <p>Share your progress and connect with others here.</p>
+    {/* TODO: Add forums, chat, or sharing features */}
   </div>
 );
 

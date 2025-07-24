@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
-const CustomBuilder = () => (
-  <div>
-    <h2>Custom Scenario Builder</h2>
-    <p>Create your own scenario for practice.</p>
-    {/* TODO: Form for custom scenario input */}
-  </div>
-);
+const CustomBuilder = () => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // TODO: Integrate with scenario library or backend
+    alert(`Custom scenario created: ${title} - ${description}`);
+    setTitle("");
+    setDescription("");
+  };
+
+  return (
+    <div>
+      <h2>Custom Scenario Builder</h2>
+      <p>Create your own scenario for practice.</p>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Scenario Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+        />
+        <br />
+        <textarea
+          placeholder="Scenario Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+        />
+        <br />
+        <button type="submit">Create Scenario</button>
+      </form>
+    </div>
+  );
+};
 
 export default CustomBuilder;
