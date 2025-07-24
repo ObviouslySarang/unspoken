@@ -13,7 +13,7 @@ function App() {
     <div>
       <h1>Unspoken Puzzle Game App</h1>
       <ScenarioLibrary onSelectScenario={setAIInput} />
-      <CustomBuilder />
+      <CustomBuilder onCreateScenario={setAIInput} />
       <PuzzleEngine />
       <AIFeedback initialInput={aiInput} />
       <Community />
