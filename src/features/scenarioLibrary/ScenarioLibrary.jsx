@@ -6,10 +6,13 @@ const ScenarioLibrary = ({ onSelectScenario }) => (
     <h2>Scenario Library</h2>
     <p>Select a scenario to practice difficult conversations.</p>
     <ul>
-      {scenarios.map(s => (
+      {scenarios.map((s) => (
         <li key={s.id}>
           <strong>{s.title}</strong>: {s.description}
-          <button style={{ marginLeft: 8 }} onClick={() => onSelectScenario(s.title + ': ' + s.description)}>
+          <button
+            style={{ marginLeft: 8 }}
+            onClick={() => onSelectScenario(s.title + ": " + s.description)}
+          >
             Use This Scenario
           </button>
         </li>
