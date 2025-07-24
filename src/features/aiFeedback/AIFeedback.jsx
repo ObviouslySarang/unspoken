@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const AIFeedback = () => {
+const AIFeedback = ({ initialInput = "" }) => {
   const [feedback, setFeedback] = useState("");
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(initialInput);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setInput(initialInput);
+  }, [initialInput]);
 
   const handleAI = async () => {
     setLoading(true);
