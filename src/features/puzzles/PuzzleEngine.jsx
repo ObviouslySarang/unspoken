@@ -52,6 +52,47 @@ function WordMaze() {
   );
 }
 
+function RolePlayDialogues() {
+  return (
+    <div>
+      <h3>Role-Play Dialogues</h3>
+      <p>Choose your response:</p>
+      <button style={{ margin: 4 }}>"I understand your point."</button>
+      <button style={{ margin: 4 }}>"Can we talk about this later?"</button>
+      <button style={{ margin: 4 }}>"I feel hurt by what happened."</button>
+    </div>
+  );
+}
+
+function LetterBuilder() {
+  const [text, setText] = useState("");
+  return (
+    <div>
+      <h3>Letter Builder</h3>
+      <textarea
+        placeholder="Write your message here..."
+        value={text}
+        onChange={e => setText(e.target.value)}
+        rows={4}
+        style={{ width: '100%', marginBottom: 8 }}
+      />
+      <div><strong>Preview:</strong> {text || "(empty)"}</div>
+    </div>
+  );
+}
+
+function BarrierBreaker() {
+  const [solved, setSolved] = useState(false);
+  return (
+    <div>
+      <h3>Barrier Breaker</h3>
+      <button onClick={() => setSolved(true)} disabled={solved}>
+        {solved ? "Barrier Broken!" : "Break the Barrier"}
+      </button>
+    </div>
+  );
+}
+
 const PuzzleEngine = () => {
   const [selected, setSelected] = useState(puzzleTypes[0]);
 
@@ -73,7 +114,9 @@ const PuzzleEngine = () => {
         <strong>Selected Puzzle:</strong> {selected}
         {selected === "Jigsaw of Emotions" && <JigsawOfEmotions />}
         {selected === "Word Maze" && <WordMaze />}
-        {/* TODO: Add more puzzle logic */}
+        {selected === "Role-Play Dialogues" && <RolePlayDialogues />}
+        {selected === "Letter Builder" && <LetterBuilder />}
+        {selected === "Barrier Breaker" && <BarrierBreaker />}
       </div>
     </div>
   );
